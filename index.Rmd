@@ -116,7 +116,7 @@ Row
 
 library(plotly)
 
-length_plot <- ggplot(iris, aes(iris$Sepal.Length, iris$Petal.Length)) +
+length_plot <- ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   geom_point(aes(color = Species), size = 3, alpha = 0.8) +
   theme_minimal() +
   scale_color_manual(values = c("darkorange","purple","cyan4")) +
@@ -134,7 +134,7 @@ Column
 
 ```{r iris_sepal_hist, echo = FALSE}
 
-ggplot(iris, aes(iris$Sepal.Width)) +
+ggplot(iris, aes(Sepal.Width)) +
   geom_histogram(aes(fill = Species),
                  alpha = 0.5,
                  position = "identity") +
